@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,
+html {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --column-height: 0px;
+}
+
+.journey-container {
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#module-container {
+  transition: width 0.8s ease-in-out;
+  width: 100%;
+  background-image: url('/bgimage.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#module-container.move {
+  width: 20%;
+}
+
+#module-container::-webkit-scrollbar {
+  width: 12px;
+}
+
+#module-container::-webkit-scrollbar-track {
+  background: #585858;
+}
+
+#module-container::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+#module-container::-webkit-scrollbar-thumb:hover {
+  background: #848484;
+}
+
+.learn-board {
+  transition: width 0.8s ease-in-out;
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.learn-board.move {
+  width: 75%;
+}
+
+.learn-board {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
+/* .vertical::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: var(--column-height);
+    background-color: #d1d5db;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container-content {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+
+.container-content.visible {
+  animation-name: slideIn;
+}

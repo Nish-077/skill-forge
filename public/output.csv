@@ -1,0 +1,119 @@
+topic,title
+Python Programming,Python Basics
+Python Programming,Data Types and Variables
+Python Programming,Control Flow
+Python Programming,Functions
+Python Programming,Modules and Packages
+Python Programming,Object Oriented Programming
+Python Programming,Exceptions and Error Handling
+Python Programming,File Handling
+Python Programming,Regular Expressions
+Machine Learning,Introduction to Machine Learning
+Machine Learning,Linear Regression
+Machine Learning,Logistic Regression
+Machine Learning,Decision Trees
+Machine Learning,Random Forest
+Machine Learning,Support Vector Machines
+Machine Learning,Naive Bayes
+Machine Learning,K-Nearest Neighbors
+Machine Learning,K-Means Clustering
+Machine Learning,Hierarchical Clustering
+Computer Vision,Introduction to Computer Vision
+Computer Vision,Image Processing Basics
+Computer Vision,Feature Detection and Extraction
+Computer Vision,Image Segmentation
+Computer Vision,Object Detection
+Computer Vision,Image Classification
+Computer Vision,Image Registration
+Computer Vision,Image Reconstruction
+Computer Vision,Motion Analysis
+Computer Vision,3D Computer Vision
+Cryptography,Introduction to Cryptography
+Cryptography,Symmetric Key Cryptography
+Cryptography,Asymmetric Key Cryptography
+Cryptography,Hash Functions
+Cryptography,Digital Signatures
+Cryptography,Key Exchange
+Cryptography,Cryptographic Protocols
+Cryptography,Quantum Cryptography
+Cryptography,Post-Quantum Cryptography
+Cryptography,Cryptography Attacks
+MERN Stack,Introduction to MERN Stack
+MERN Stack,Setting up MERN Development Environment
+MERN Stack,MongoDB Basics
+MERN Stack,Express.js Basics
+MERN Stack,React Basics
+MERN Stack,Node.js Basics
+MERN Stack,What are RESTApi's
+MERN Stack,Deploying MERN Applications
+MERN Stack,Introduction to MongoDB
+MERN Stack,MongoDB Installation and Setup
+MERN Stack,MongoDB Data Modeling
+MERN Stack,CRUD Operations in MongoDB
+MERN Stack,MongoDB Querying and Projection
+MERN Stack,MongoDB Indexing
+MERN Stack,MongoDB Aggregation Pipeline
+MERN Stack,MongoDB Replication and Sharding
+MERN Stack,MongoDB Security
+MERN Stack,Introduction to Express.js
+MERN Stack,Express.js Installation and Setup
+MERN Stack,Express.js Routing
+MERN Stack,Express.js Middleware
+MERN Stack,Express.js Templating Engines
+MERN Stack,Express.js Error Handling
+MERN Stack,Express.js API Development
+MERN Stack,Express.js Authentication and Authorization
+MERN Stack,Express.js Testing
+MERN Stack,Express.js Best Practices
+MERN Stack,Introduction to React
+MERN Stack,Setting up React Environment
+MERN Stack,JSX Syntax
+MERN Stack,Components
+MERN Stack,Props
+MERN Stack,Lifecycle Methods
+MERN Stack,State
+MERN Stack,Lists and Keys
+MERN Stack,Forms and User Input
+MERN Stack,Conditional Rendering
+MERN Stack,React Router
+MERN Stack,Redux Integration
+MERN Stack,Introduction to Node.js
+MERN Stack,Setting up Node.js Environment
+MERN Stack,Node.js Core Modules
+MERN Stack,Node.js Event Emitter
+MERN Stack,Node.js File System
+MERN Stack,Node.js Streams
+MERN Stack,Node.js HTTP Module
+MERN Stack,Node.js Debugging
+MERN Stack,Node.js Testing
+MERN Stack,Node.js Best Practices
+Computer Networks,Introduction to Computer Networks
+Computer Networks,Network Models and Protocols
+Computer Networks,Network Topologies
+Computer Networks,Data Transmission and Communication
+Computer Networks,Networking Devices
+Computer Networks,Network Security
+Computer Networks,Network Performance
+Computer Networks,Wireless Networks
+Computer Networks,Network Troubleshooting
+Computer Networks,Cloud Computing and Networking
+Blockchain,Introduction to Blockchain
+Blockchain,Blockchain Basics: Decentralization and Distributed Ledgers
+Blockchain,Blockchain Architecture and Components
+Blockchain,Cryptographic Hashing and Digital Signatures
+Blockchain,Consensus Mechanisms
+Blockchain,Smart Contracts
+Blockchain,Blockchain Applications Beyond Cryptocurrency
+Blockchain,Blockchain Challenges and Limitations
+Blockchain,Blockchain Security and Privacy
+Blockchain,Blockchain Future Trends
+Artificial Intelligence,Introduction to Artificial Intelligence
+Artificial Intelligence,Machine Learning
+Artificial Intelligence,Deep Learning
+Artificial Intelligence,Neural Networks
+Artificial Intelligence,Computer Vision
+Artificial Intelligence,Natural Language Processing
+Artificial Intelligence,Reinforcement Learning
+Artificial Intelligence,Generative AI
+Artificial Intelligence,AI Ethics and Bias
+Artificial Intelligence,AI Applications in Various Fields
