@@ -107,7 +107,7 @@ const HomePage = () => {
       <section id="home" className="section">
         <h1 id="main-title">SkillForge</h1>
         <p id="subtitle">Revolutionizing learning through AI-driven personalization and project based certification</p>
-        <button className="cta-button" onClick={() => window.location.href = 'http://localhost:3000/login'}>Embark on Your Journey</button>
+        <button className="cta-button" onClick={() => window.location.href = '/login'}>Embark on Your Journey</button>
       </section>
       <section id="about" className="section">
         <h2>Redefine Your Learning</h2>
