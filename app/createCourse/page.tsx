@@ -132,8 +132,6 @@ const LearningComponent: React.FC = () => {
         stop: null
       });
 
-      console.log('Groq API response:', chatCompletion);
-
       const response = chatCompletion.choices[0]?.message?.content;
 
       if (!response) {
@@ -160,13 +158,22 @@ const LearningComponent: React.FC = () => {
         body: JSON.stringify({ fileName: 'output.csv', csvData: csv }),
       });
 
-      console.log('MongoDB store response:', await mongoResponse.text());
-
-      const data = await mongoResponse.json();
-      if (data.error) {
-        console.error('Failed to save CSV:', data.error);
+      let mongoData;
+      try {
+        mongoData = await mongoResponse.json();
+      } catch (jsonError) {
+        console.error('Error parsing MongoDB response:', jsonError);
+        mongoData = { error: 'Failed to parse response' };
       }
-      
+      console.log('MongoDB store response:', mongoData);
+
+      if (mongoData.status === 200) {
+        setResult(relevantData);
+        setIsFileSaved(true);
+      } else {
+        throw new Error('Failed to save CSV data');
+      }
+
       // const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       // const link = document.createElement('a');
 
@@ -176,8 +183,6 @@ const LearningComponent: React.FC = () => {
       // link.click();
       // document.body.removeChild(link);
 
-      setResult(relevantData);
-      setIsFileSaved(true);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An unknown error occurred while processing your request.");
       console.error(err);
