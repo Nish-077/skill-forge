@@ -132,6 +132,8 @@ const LearningComponent: React.FC = () => {
         stop: null
       });
 
+      console.log('Groq API response:', chatCompletion);
+
       const response = chatCompletion.choices[0]?.message?.content;
 
       if (!response) {
@@ -157,6 +159,8 @@ const LearningComponent: React.FC = () => {
         },
         body: JSON.stringify({ fileName: 'output.csv', csvData: csv }),
       });
+
+      console.log('MongoDB store response:', await mongoResponse.text());
 
       const data = await mongoResponse.json();
       if (data.error) {

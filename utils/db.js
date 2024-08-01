@@ -3,7 +3,6 @@ const MONGODB_URI = process.env.MONGODB_URI;
 
 
 const connect = async () => {
-    console.log(process.env.GROQ_KEY)
     if (mongoose.connections[0].readyState) return;
     try {
         await mongoose.connect(MONGODB_URI, {
