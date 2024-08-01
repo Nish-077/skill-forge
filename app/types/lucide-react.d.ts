@@ -19,4 +19,5 @@ declare module 'lucide-react' {
   export const Brain: Icon;
   export const Code: Icon;
   export const Info: any;
+  export const ChevronRight: Icon;
 }
