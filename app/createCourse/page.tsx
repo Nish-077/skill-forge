@@ -165,7 +165,6 @@ const LearningComponent: React.FC = () => {
         console.error('Error parsing MongoDB response:', jsonError);
         mongoData = { error: 'Failed to parse response' };
       }
-      console.log('MongoDB store response:', mongoData);
 
       if (mongoData.message === "CSV output saved successfully") {
         setResult(relevantData);
