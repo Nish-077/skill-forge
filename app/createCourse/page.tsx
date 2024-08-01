@@ -167,7 +167,7 @@ const LearningComponent: React.FC = () => {
       }
       console.log('MongoDB store response:', mongoData);
 
-      if (mongoData.status === 200) {
+      if (mongoData.status === "CSV output saved successfully") {
         setResult(relevantData);
         setIsFileSaved(true);
       } else {
