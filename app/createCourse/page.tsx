@@ -112,9 +112,6 @@ const LearningComponent: React.FC = () => {
         Ensure the course structure is comprehensive, well-organized, and tailored to the user's specific learning goals while maintaining the simple 'topic', 'title' output format.`;
       const userPrompt = `USER's Learning Goal: ${learningGoal}\n\nCSV Data:\n${dataArray.map(row => row.join(',')).join('\n')}`;
 
-      console.log(userPrompt);
-      console.log(systemPrompt);
-
       const groq = new Groq({ apiKey: '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', dangerouslyAllowBrowser: true });
       const chatCompletion = await groq.chat.completions.create({
         messages: [
@@ -135,8 +132,6 @@ const LearningComponent: React.FC = () => {
         stop: null
       });
 
-      console.log("groq req sent", chatCompletion);
-
       const response = chatCompletion.choices[0]?.message?.content;
 
       if (!response) {
@@ -154,16 +149,20 @@ const LearningComponent: React.FC = () => {
         throw new Error("No relevant data found in the API response");
       }
 
-      // Generate and download CSV using PapaParse
       const csv = Papa.unparse(relevantData, { header: true });
-
-      await fetch('/api/save-csv', {
+      const mongoResponse = await fetch('/api/store-csv', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ fileName: 'output.csv', csvData: csv }),
       });
+
+      const data = await mongoResponse.json();
+      if (data.error) {
+        console.error('Failed to save CSV:', data.error);
+      }
+      
       // const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
       // const link = document.createElement('a');
 

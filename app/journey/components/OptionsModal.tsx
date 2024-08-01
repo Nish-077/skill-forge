@@ -58,6 +58,12 @@ const OptionsModal: React.FC<OptionsModalProps> = ({ options, nextModule, module
                     <div id="options" className="flex flex-wrap w-full justify-center">
                         {renderedModules.map(renderModule)}
                     </div>
+                    <button 
+                        className="mt-4 px-6 py-2 bg-white text-red-600 font-semibold rounded-lg shadow-md hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75 transition-colors duration-200"
+                        onClick={() => window.location.href = '/project'}
+                    >
+                        Submit your Project
+                    </button>
                 </div>
             </div>
         </div>

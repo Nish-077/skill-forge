@@ -123,14 +123,14 @@ async function fetchData() {
     let modules = [];
 
     try {
-        const datasetResponse = await fetch("/api/read-csv?filename=data.csv");
+        const datasetResponse = await fetch("/api/get-csv?filename=data.csv");
         const datasetData = await datasetResponse.json();
-        const datasetCsvData = datasetData;
-
-        const outputResponse = await fetch("/api/read-csv?filename=output.csv");
+        const datasetCsvData = datasetData.data;
+        
+        const outputResponse = await fetch("/api/get-csv?filename=output.csv");
         const outputData = await outputResponse.json();
-        const outputCsvData = outputData;
-
+        const outputCsvData = outputData.data;
+        
         const resourceObjs = outputCsvData.map((output: any) => {
             return datasetCsvData.find((obj: any) => obj.title === output.title);
         });
@@ -313,8 +313,8 @@ const Journey = () => {
             return null;
         }
     };
-
-    const currentVideoId = getCurrentVideoId(contentState);
+    
+    const currentVideoId = contentState ? getCurrentVideoId(contentState): null;
     const currentVideoProgress = currentVideoId ? videoProgress[currentVideoId] || 0 : 0;
 
     const renderModules = (module: Module) => (

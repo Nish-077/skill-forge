@@ -1,21 +1,18 @@
 import mongoose from 'mongoose';
-const MONGODB_URI= "mongodb+srv://user:jeZ20q3WBO6skaYE@skillforge.wze4mxf.mongodb.net/"
-
-
+const MONGODB_URI = process.env.MONGODB_URI;
 
 
 const connect = async () => {
+    console.log(process.env.GROQ_KEY)
     if (mongoose.connections[0].readyState) return;
     try {
         await mongoose.connect(MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        
+            dbName: "test"
         });
         console.log('MongoDB connected');
     } catch (error) {
         console.error(error);
         process.exit(1);
     }
-    };
-export  default connect;
+};
+export default connect;
