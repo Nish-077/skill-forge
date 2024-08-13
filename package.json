@@ -17,7 +17,7 @@
     "@react-three/postprocessing": "^2.16.2",
     "@types/three": "^0.167.0",
     "@types/youtube": "^0.0.50",
-    "axios": "^1.7.2",
+    "axios": "^1.7.3",
     "bcryptjs": "^2.4.3",
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
