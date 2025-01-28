@@ -112,7 +112,7 @@ const LearningComponent: React.FC = () => {
         Ensure the course structure is comprehensive, well-organized, and tailored to the user's specific learning goals while maintaining the simple 'topic', 'title' output format.`;
       const userPrompt = `USER's Learning Goal: ${learningGoal}\n\nCSV Data:\n${dataArray.map(row => row.join(',')).join('\n')}`;
 
-      const groq = new Groq({ apiKey: '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', dangerouslyAllowBrowser: true });
+      const groq = new Groq({ apiKey: process.env.GROQ_API_KEY, dangerouslyAllowBrowser: true });
       const chatCompletion = await groq.chat.completions.create({
         messages: [
           {
