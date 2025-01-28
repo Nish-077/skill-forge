@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = 'AIzaSyBls8XZnNom_ZU7rFN46dqKNBua-6rU3O8';
+const API_KEY = process.env.GOOGLE_API_KEY;
 
 const getVideoDetails = async (videoIds: string[]): Promise<any[]> => {
     const ids = videoIds.join(',');
